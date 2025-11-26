@@ -22,6 +22,11 @@ This project uses the Bun test runner. Run the suite with:
 bun test
 ```
 
+## UI & Theming
+
+- Radix Themes is configured globally in `src/app/layout.tsx` via the `<Theme>` wrapper (indigo accent, sand grays, large radius). Theme styles are imported once with `@radix-ui/themes/styles.css`.
+- Use Radix components inside client components; wrap Next.js links with `asChild` when nesting in Radix buttons. Avoid re-importing the theme CSS in pages or components.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

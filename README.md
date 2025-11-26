@@ -22,6 +22,10 @@ This project uses the Bun test runner. Run the suite with:
 bun test
 ```
 
+## Contributing
+
+- Use semantic commit messages (e.g., `feat: add dashboard route`, `fix: handle empty state`) and keep commits focused and runnable.
+
 ## UI & Theming
 
 - Radix Themes is configured globally in `src/app/layout.tsx` via the `<Theme>` wrapper (indigo accent, sand grays, large radius). Theme styles are imported once with `@radix-ui/themes/styles.css`.

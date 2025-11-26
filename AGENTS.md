@@ -27,7 +27,7 @@
 - Aim for meaningful coverage on data transforms and client components; snapshot sparingly.
 
 ## Commit & Pull Request Guidelines
-- Git history is minimal; follow short, imperative subjects (`Add dashboard route`) with optional scope (`feat: add dashboard route`).
+- Git history is minimal; always use semantic commit subjects (`feat: add dashboard route`, `fix: handle empty state`) with short, imperative wording.
 - Keep commits focused and runnable; include lint/format in the same change.
 - Before committing, run `bun test`, `bun run lint`, and `bun run format` to keep CI green and consistent.
 - Pull requests should describe the change, testing performed (`bun run lint`, manual flows), and screenshots/recordings for UI updates. Link issues when available.

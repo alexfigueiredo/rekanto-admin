@@ -4,11 +4,13 @@ body {
   overflow-x: hidden;
 }
 
+/*noinspection CssUnresolvedCustomProperty*/
 body {
   color: var(--gray-12);
   background: var(--color-surface);
-  font-family: "Inter", system-ui, -apple-system,
-  BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    var(--font-geist-sans), "Inter", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

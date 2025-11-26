@@ -18,6 +18,7 @@
 - Components and hooks: PascalCase (`UserCard.tsx`), hooks start with `useX`. CSS modules match the route (`page.module.css`).
 - Keep React components small and server-first where possible; favor server components unless client hooks are required. Use Radix layout primitives (e.g., `Flex`, `Grid`, `Box`) instead of custom divs when possible.
 - Build UI with Radix Themes components; nest Next.js links inside Radix buttons using `asChild` to avoid invalid anchors. Prefer Radix design tokens (colors, spacing, radii, fonts) via CSS variables when styling.
+- Icons come from `lucide-react`; import named icons per usage (tree-shaken) inside client components.
 
 ## Testing Guidelines
 - Bun is the test runner; run suites with `bun test`. Prefer colocated `*.test.tsx` or `src/__tests__/` for broader coverage.

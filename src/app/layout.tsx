@@ -1,3 +1,4 @@
+import { ptBR } from "@clerk/localizations";
 import { Theme } from "@radix-ui/themes";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -5,6 +6,7 @@ import { ThemeProvider } from "next-themes";
 import type { ReactNode } from "react";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,14 +29,16 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <ThemeProvider attribute="class">
-          <Theme accentColor="blue" panelBackground="solid" radius="large">
-            {children}
-          </Theme>
-        </ThemeProvider>
-      </body>
-    </html>
+    <ClerkProvider localization={ptBR}>
+      <html lang="pt-BR" suppressHydrationWarning>
+        <body className={`${geistSans.variable} ${geistMono.variable}`}>
+          <ThemeProvider attribute="class">
+            <Theme accentColor="blue" panelBackground="solid" radius="large">
+              {children}
+            </Theme>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -10,6 +10,8 @@
     "format": "biome format --write"
   },
   "dependencies": {
+    "@clerk/localizations": "^3.26.4",
+    "@clerk/nextjs": "^6.35.5",
     "@radix-ui/themes": "^3.2.1",
     "lucide-react": "^0.555.0",
     "next": "16.0.4",

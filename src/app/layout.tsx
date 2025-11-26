@@ -27,15 +27,10 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <ThemeProvider attribute="class">
-          <Theme
-            appearance="inherit"
-            accentColor="indigo"
-            grayColor="sand"
-            radius="large"
-          >
+          <Theme accentColor="blue" panelBackground="solid" radius="large">
             {children}
           </Theme>
         </ThemeProvider>

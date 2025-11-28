@@ -4,7 +4,6 @@
 - Source lives in `src/app`; `layout.tsx` wires shared providers and `globals.css`, while `page.tsx` is the main entry. Add route segments as folders (e.g., `src/app/dashboard/page.tsx`).
 - Use colocated styles like `page.module.css` for route-scoped CSS. Global tokens and resets belong in `globals.css`.
 - Static assets belong in `public/` and are served from the root (`/images/foo.png`).
-- Radix Themes is applied in `src/app/layout.tsx` via the `<Theme>` wrapper; global theme styles are imported once with `@radix-ui/themes/styles.css` (do not re-import per page).
 
 ## Build, Test, and Development Commands
 - Install deps with `bun install` (preferred) or `npm install`.
@@ -17,8 +16,9 @@
 - Always import types with the `type` keyword, and import React types from `react` instead of relying on the global UMD React object.
 - Formatting enforced by Biome (2-space indent, semicolons off by default). Run lint/format before commits.
 - Components and hooks: PascalCase (`UserCard.tsx`), hooks start with `useX`. CSS modules match the route (`page.module.css`).
-- Keep React components small and server-first where possible; favor server components unless client hooks are required. Use Radix layout primitives (e.g., `Flex`, `Grid`, `Box`) instead of custom divs when possible.
-- Build UI with Radix Themes components; nest Next.js links inside Radix buttons using `asChild` to avoid invalid anchors. Prefer Radix design tokens (colors, spacing, radii, fonts) via CSS variables when styling.
+- Keep React components small and server-first where possible; favor server components unless client hooks are required.
+- Use simple Tailwind for CSS;
+- Build UI with Shadcn components;
 - Icons come from `lucide-react`; import named icons per usage (tree-shaken) inside client components.
 
 ## Testing Guidelines

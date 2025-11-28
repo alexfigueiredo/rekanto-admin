@@ -28,9 +28,9 @@ bun test
 
 ## UI & Theming
 
-- Radix Themes is configured globally in `src/app/layout.tsx` via the `<Theme>` wrapper (indigo accent, sand grays, large radius). Theme styles are imported once with `@radix-ui/themes/styles.css`.
-- Use Radix components inside client components; wrap Next.js links with `asChild` when nesting in Radix buttons. Avoid re-importing the theme CSS in pages or components.
-- Icons: pull from `lucide-react` via named imports (e.g., `import { Sparkles } from "lucide-react"`); keep usage scoped to client components.
+- This project uses [Shadcn](https://ui.shadcn.com/) for UI components, which are built on top of Tailwind CSS.
+- Components are located in `src/components/ui` and can be customized as needed.
+- Icons are provided by `lucide-react`.
 
 ## Learn More
 
